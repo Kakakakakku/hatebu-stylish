@@ -1,7 +1,9 @@
 var observer = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
-    element = document.querySelector('#page-content blockquote');
-    element.parentNode.removeChild(element);
+    var elements = document.querySelectorAll('#page-content blockquote');
+    [].forEach.call(elements, function(element) {
+      element.parentNode.removeChild(element);
+    });
   });
 });
  
