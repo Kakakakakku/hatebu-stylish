@@ -1,0 +1,19 @@
+{
+  "name": "hatebu-stylish",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Hatena::Bookmark で記事のサマリを削除する",
+  "permissions": [
+    "tabs",
+    "contextMenus"
+  ],
+  "icons": {
+    "48": "./icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://b.hatena.ne.jp/*"],
+      "js": ["app.js"]
+    }
+  ]
+}
